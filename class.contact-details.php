@@ -41,65 +41,41 @@ final class LittleBizzy_Contact_Details {
 
 		// Array for storing form structure
 		$data = array(
-
+			
 			'Basic Details' => array(
-
 				'primary_contact_name' => 'Primary Contact Name',
 				'business_name' => 'Business Name',
-				'copyright_text' => 'Copyright Text'
-
-			),
-
-			'Address 1' => array(
-
 				'location_name' => 'Location Name',
+				'location_name_2' => 'Location Name 2',
 				'phone_number' => 'Phone Number',
+				'phone_number_2' => 'Phone Number 2',
 				'fax' => 'Fax',
-				'mobile' => 'Mobile',
+				'fax_2' => 'Fax 2',
 				'email_address' => 'Email Address',
-				'street_number_name' => 'Street Number &amp; Name',
-				'suburb' => 'Suburb',
+				'email_address_2' => 'Email Address 2',
+				'address' => 'Address',
+				'address_2' => 'Address 2',
+				'city' => 'City',
+				'city_2' => 'City 2',
 				'postcode' => 'Postcode',
+				'postcode_2' => 'Postcode 2',
 				'state' => 'State',
+				'state_2' => 'State 2',
 				'country' => 'Country',
-				'business_hours' => 'Business Hours'
-
-			),
-			'Address 2' => array(
-
-				'location_name_2' => 'Location Name',
-				'phone_number_2' => 'Phone Number',
-				'fax_2' => 'Fax',
-				'mobile_2' => 'Mobile',
-				'email_address_2' => 'Email Address',
-				'street_number_name_2' => 'Street Number &amp; Name',
-				'suburb_2' => 'Suburb',
-				'postcode_2' => 'Postcode',
-				'state_2' => 'State',
-				'country_2' => 'Country',
-				'business_hours_2' => 'Business Hours'
-
-			),
-			'Australian Business Numbers' => array(
-
-				'abn' => 'ABN',
-				'acn' => 'ACN'
-
-			),
-			'Social Networking' => array(
-
+				'country_2' => 'Country 2',
+				'business_hours' => 'Business Hours',
+				'business_hours_2' => 'Business Hours 2',
+				'id_number' => 'ID Number',
+				'id_number_2' => 'ID Number 2',
 				'facebook' => 'Facebook',
 				'twitter' => 'Twitter',
 				'instagram' => 'Instagram',
-				'googleplus' => 'Google+',
 				'pinterest' => 'Pinterest',
 				'linkedin' => 'LinkedIn',
 				'youtube' => 'YouTube',
 				'soundcloud' => 'SoundCloud',
 				'myspace' => 'MySpace'
-
-			)
-
+				),
 		);
 
 		// Render options in-line with WordPress core styling
@@ -108,7 +84,7 @@ final class LittleBizzy_Contact_Details {
 		echo '	<div class="icon32" id="icon-options-general"><br></div>';
 		echo '	<h2>Contact Details</h2>';
 
-		echo '	<p>Enter your contact details below. To display any particular contact details on your website, use the shortcode supplied</p>';
+		echo '	<p>Enter your contact details below. To display any particular contact details on your website, use the shortcode supplied.</p>';
 
 		// Check if posting, if so, save data
 		if( !empty( $_POST ) && isset( $_POST['_nonce'] ) ) {
@@ -142,24 +118,22 @@ final class LittleBizzy_Contact_Details {
 		// Loop through "sections" and output form fields
 		foreach( $data as $section => $fields ) {
 
-			echo '<div class="contact-details">';
-
-			echo '	<h3>' . $section . '</h3>';
+			echo '<table class="widefat striped fixed"><thead><tr><th><strong>Field</strong></th><th><strong>Value</strong></th><th><strong>Shortcode</strong></th></tr></thead><tbody><div class="contact-details">';
 
 			foreach( $fields as $key => $title ) {
 
-				echo '<label for="' . $key . '">' . $title . '</label>';
-				echo '<input type="text" name="contact_details[' . $key . ']" value="' . esc_attr( $details[$key] ) . '" />&nbsp;&nbsp;&nbsp;';
-				echo '[contact type="' . $key . '"]';
-				echo '<br /><br />';
+				echo '<tr><td><label for="' . $key . '">' . $title . '</label></td>';
+				echo '<td><input type="text" name="contact_details[' . $key . ']" value="' . esc_attr( $details[$key] ) . '" /></td>';
+				echo '<td>[contact type="' . $key . '"]</td>';
+				echo '</tr>';
 
 			}
 
-			echo '</div>';
+			echo '</div></tbody></table>';
 
 		}
 
-		echo '<input type="hidden" name="_nonce" value="' . wp_create_nonce( '_contact_details' ) . '" />';
+		echo '<br /><input type="hidden" name="_nonce" value="' . wp_create_nonce( '_contact_details' ) . '" />';
 		echo '<input type="submit" value="Save Details" class="button button-primary" />';
 
 		echo '	</form>';
