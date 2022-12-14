@@ -1,8 +1,8 @@
 <?php 
 /*
-Plugin Name: Contact Information
-Plugin URI: 
-GitHub Plugin URI: littlebizzy/contact-information
+Plugin Name: Contact Details
+Plugin URI: https://www.littlebizzy.com/plugins/contact-details
+GitHub Plugin URI: littlebizzy/contact-details
 Description:
 Version: 0.0.0
 Author: LittleBizzy
