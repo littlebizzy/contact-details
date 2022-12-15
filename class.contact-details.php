@@ -135,18 +135,18 @@ final class LittleBizzy_Contact_Details {
 		// Loop through "sections" and output form fields
 		foreach( $data as $section => $fields ) {
 
-			echo '<table class="widefat striped fixed"><thead><tr><th><strong>Field</strong></th><th><strong>Value</strong></th><th><strong>Shortcode</strong></th></tr></thead><tbody><div class="contact-details">';
+			echo '<table class="widefat striped" style="width:100%;white-space:nowrap;vertical-align:middle;"><thead><tr><th><strong>Field</strong></th><th style="width:100%;"><strong>Value</strong></th><th><strong>Shortcode</strong></th></tr></thead><tbody>';
 
 			foreach( $fields as $key => $title ) {
 
-				echo '<tr><td><label for="' . $key . '">' . $title . '</label></td>';
-				echo '<td><input type="text" name="contact_details[' . $key . ']" value="' . esc_attr( $details[$key] ) . '" /></td>';
-				echo '<td>[contact type="' . $key . '"]</td>';
+				echo '<tr><td style="vertical-align:middle;"><label for="' . $key . '">' . $title . '</label></td>';
+				echo '<td><input style="width:100%;" type="text" name="contact_details[' . $key . ']" value="' . esc_attr( $details[$key] ) . '" /></td>';
+				echo '<td style="vertical-align:middle;">[contact type="' . $key . '"]</td>';
 				echo '</tr>';
 
 			}
 
-			echo '</div></tbody></table>';
+			echo '</tbody></table>';
 
 		}
 
