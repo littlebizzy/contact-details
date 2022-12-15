@@ -59,6 +59,8 @@ final class LittleBizzy_Contact_Details {
 				'city_2' => 'City 2',
 				'postcode' => 'Postcode',
 				'postcode_2' => 'Postcode 2',
+				'city' => 'City',
+				'city_2' => 'City 2',
 				'state' => 'State',
 				'state_2' => 'State 2',
 				'country' => 'Country',
@@ -74,7 +76,22 @@ final class LittleBizzy_Contact_Details {
 				'linkedin' => 'LinkedIn',
 				'youtube' => 'YouTube',
 				'soundcloud' => 'SoundCloud',
-				'myspace' => 'MySpace'
+				'myspace' => 'MySpace',
+				'discord' => 'Discord',
+				'telegram' => 'Telegram',
+				'flickr' => 'Flickr',
+				'line' => 'Line',
+				'skype' => 'Skype',
+				'messenger' => 'Messenger',
+				'github' => 'GitHub',
+				'tiktok' => 'TikTok',
+				'snapchat' => 'Snapchat',
+				'reddit' => 'Reddit',
+				'wechat' => 'WeChat',
+				'qq' => 'QQ',
+				'tumblr' => 'Tumblr',
+				'mewe' => 'MeWe',
+				'meetup' => 'Meetup'
 				),
 		);
 
