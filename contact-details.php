@@ -2,13 +2,14 @@
 /*
 Plugin Name: Contact Details
 Plugin URI: https://www.littlebizzy.com/plugins/contact-details
-GitHub Plugin URI: littlebizzy/contact-details
 Description: Contact information shortcodes
-Version: 1.0.2
+Version: 1.1.0
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
+GitHub Plugin URI: https://github.com/littlebizzy/contact-details
+Primary Branch: main
 Forked from: https://wordpress.org/plugins/contact-details/
 */
 
@@ -17,3 +18,10 @@ if( !class_exists( 'LittleBizzy_Contact_Details' ) )
 require_once( trailingslashit( dirname( __FILE__ ) ) . 'class.contact-details.php' );
 
 new LittleBizzy_Contact_Details();
+
+// disable wordpress.org updates
+add_filter( 'gu_override_dot_org', function() {
+    return [ 
+        'contact-details/contact-details.php'
+    ];
+});
