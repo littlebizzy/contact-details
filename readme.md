@@ -4,6 +4,9 @@ Contact information shortcodes
 
 ## Changelog
 
+### 1.1.1
+- moved disable wordpress.org snippet
+
 ### 1.1.0
 - disabled update checks from wordpress.org
 - better headers for Git Updater
