@@ -3,7 +3,7 @@
 Plugin Name: Contact Details
 Plugin URI: https://www.littlebizzy.com/plugins/contact-details
 Description: Contact information shortcodes
-Version: 1.1.0
+Version: 1.1.1
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -13,15 +13,15 @@ Primary Branch: main
 Forked from: https://wordpress.org/plugins/contact-details/
 */
 
-// ensure class defined
-if( !class_exists( 'LittleBizzy_Contact_Details' ) )
-require_once( trailingslashit( dirname( __FILE__ ) ) . 'class.contact-details.php' );
-
-new LittleBizzy_Contact_Details();
-
 // disable wordpress.org updates
 add_filter( 'gu_override_dot_org', function() {
     return [ 
         'contact-details/contact-details.php'
     ];
 });
+
+// ensure class defined
+if( !class_exists( 'LittleBizzy_Contact_Details' ) )
+require_once( trailingslashit( dirname( __FILE__ ) ) . 'class.contact-details.php' );
+
+new LittleBizzy_Contact_Details();
