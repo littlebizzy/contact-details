@@ -4,6 +4,9 @@ Contact information shortcodes
 
 ## Changelog
 
+### 1.1.2
+- improved disable wordpress.org snippet
+
 ### 1.1.1
 - moved disable wordpress.org snippet
 
