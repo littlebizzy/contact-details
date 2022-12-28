@@ -4,6 +4,9 @@ Contact information shortcodes
 
 ## Changelog
 
+### 1.1.3
+- added fields (hours, latitude, longitude)
+
 ### 1.1.2
 - improved disable wordpress.org snippet
 
