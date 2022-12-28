@@ -3,7 +3,7 @@
 Plugin Name: Contact Details
 Plugin URI: https://www.littlebizzy.com/plugins/contact-details
 Description: Contact information shortcodes
-Version: 1.1.2
+Version: 1.1.3
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
